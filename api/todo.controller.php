@@ -60,9 +60,10 @@ class TodoController {
                 $todoExisting->title = $todo->title;
                 $todoExisting->description = $todo->description;
                 $todoExisting->done = $todo->done;    
-                return $todoExisting;
+                
+                }
             }
-                 
+            
             $update = file_put_contents($this->PATH, json_encode($todos)); 
              
             return $update?true:false; 
