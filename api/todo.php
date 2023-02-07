@@ -35,6 +35,9 @@ try {
                 if ($isCreated) {
                     http_response_code(201);
                     die(json_encode($todo));
+                }else{
+                    http_response_code(404);
+                    die();
                 }
                 
             } else {
@@ -51,6 +54,9 @@ try {
                  if ($isUpdated) {
                     http_response_code(200);
                     die(json_encode($todo));
+                }else{
+                    http_response_code(404);
+                    die();
                 }
                 
             } else {
@@ -67,6 +73,9 @@ try {
                  if ($isDeleted) {
                     http_response_code(200);
                     die(json_encode($todo));
+                }else{
+                    http_response_code(404);
+                    die();
                 }
                 
             } else {
